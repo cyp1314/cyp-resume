@@ -1,0 +1,10 @@
+
+#swiper {
+	height: 120px;
+	position: absolute;
+}
+.page {
+	position: relative;
+	height: 60vh;
+}
+
