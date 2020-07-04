@@ -3,18 +3,26 @@
 		<cu-custom bgColor="bg-gradual-blue">
 			<block slot="content">项目经验</block>
 		</cu-custom>
-		<swiper id="swiper" class="card-swiper" :class="dotStyle?'square-dot':'round-dot'" :indicator-dots="true" :circular="true"
-		 :autoplay="true" interval="1000" duration="600" @change="cardSwiper" indicator-color="#8799a3"
-		 indicator-active-color="#0081ff">
-			<swiper-item v-for="(item,index) in swiperList" :key="index" :class="cardCur==index?'cur':''">
-				<view class="swiper-item">
-					<image :src="item.url" mode="aspectFill" v-if="item.type=='image'"></image>
-					<video :src="item.url" autoplay loop muted :show-play-btn="false" :controls="false" objectFit="cover" v-if="item.type=='video'"></video>
-				</view>
-			</swiper-item>
-		</swiper>
 		
-		<scroll-view scroll-y class="page">
+		
+		<view id="swiper" class="bg-white uni-padding-wrap">
+			<view class="page-section swiper">
+				<view class="page-section-spacing">
+					<swiper  class="card-swiper" :class="dotStyle?'square-dot':'round-dot'" :indicator-dots="true"
+					 :circular="true" :autoplay="true" interval="1000" duration="600" @change="cardSwiper" indicator-color="#8799a3"
+					 indicator-active-color="#0081ff">
+						<swiper-item v-for="(item,index) in swiperList" :key="index" :class="cardCur==index?'cur':''">
+							<view class="swiper-item">
+								<image :src="item.url" mode="aspectFill" v-if="item.type=='image'"></image>
+								<!-- <video :src="item.url" autoplay loop muted :show-play-btn="false" :controls="false" objectFit="cover" v-if="item.type=='video'"></video> -->
+							</view>
+						</swiper-item>
+					</swiper>
+				</view>
+			</view>
+		</view>
+		
+		<scroll-view scroll-y class="page bg-white">
 			<view class="cu-timeline">
 				<view class="cu-time">MNO项目</view>
 				<view class="cu-item">
@@ -200,12 +208,13 @@
 
 <style>
 	#swiper {
-		height: 120px;
+		height: 20vh;
 		position: absolute;
 	}
 
 	.page {
 		position: relative;
+		bottom: 0px;
 		height: 60vh;
 	}
 </style>

@@ -7619,9 +7619,9 @@ module.exports = g;
 
 /***/ }),
 /* 4 */
-/*!*********************************************************!*\
-  !*** D:/Workspace/HBuilderProjects/test/cyp/pages.json ***!
-  \*********************************************************/
+/*!****************************************************************!*\
+  !*** D:/Workspace/HBuilderProjects/test/cyp-resume/pages.json ***!
+  \****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -8525,20 +8525,20 @@ module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.
 
 /***/ }),
 /* 7 */
-/*!**************************************************************************!*\
-  !*** D:/Workspace/HBuilderProjects/test/cyp/pages.json?{"type":"style"} ***!
-  \**************************************************************************/
+/*!*********************************************************************************!*\
+  !*** D:/Workspace/HBuilderProjects/test/cyp-resume/pages.json?{"type":"style"} ***!
+  \*********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/work/work": { "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/project/project": { "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/skills/skills": { "usingComponents": {}, "usingAutoImportComponents": {} } }, "globalStyle": { "navigationBarBackgroundColor": "#0081ff", "navigationBarTitleText": "陈永鹏-JAVA开发", "navigationStyle": "custom", "navigationBarTextStyle": "white" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": {}, "pages/work/work": {}, "pages/project/project": {}, "pages/skills/skills": {} }, "globalStyle": { "navigationBarBackgroundColor": "#0081ff", "navigationBarTitleText": "陈永鹏-JAVA开发", "navigationStyle": "custom", "navigationBarTextStyle": "white" } };exports.default = _default;
 
 /***/ }),
 /* 8 */
-/*!*************************************************************************!*\
-  !*** D:/Workspace/HBuilderProjects/test/cyp/pages.json?{"type":"stat"} ***!
-  \*************************************************************************/
+/*!********************************************************************************!*\
+  !*** D:/Workspace/HBuilderProjects/test/cyp-resume/pages.json?{"type":"stat"} ***!
+  \********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

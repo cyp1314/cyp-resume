@@ -3,8 +3,8 @@
 	<view class="vbox">
 		<image class="top_back_img" src="../../static/person/set-top-bg_1.png" mode="aspectFit"></image>
 		<view class="top">
-			<view class="circle" @tap="showModal" data-target="Image">
-				<image class="head" src="../../static/person/head.jpg" mode="aspectFill"></image>
+			<view class="circle" @tap="showModal" data-target="myPhoto">
+				<image class="head" src="../../static/person/you.jpg" mode="aspectFill"></image>
 			</view>
 			<view class="top-texts">
 				<text class="name">陈永鹏</text>
@@ -19,12 +19,13 @@
 			</view>
 		</view>
 		
-		<view class="cu-modal" :class="modalName=='Image'?'show':''">
+		<view class="cu-modal" :class="modalName=='myPhoto'?'show':''">
 			<view class="cu-dialog">
-				<view class="bg-img" style="background-image: url(../../static/person/head.jpg););height:200px;">
+				<view class="bg-img" style="background-image: url(http://tvax4.sinaimg.cn/large/005Tv2WXgy1ggfh9e8zomj30u0140mzf.jpg);height: 400px;">
+					<!-- <image src="../../static/person/you.jpg" mode="widthFix"></image> -->
 					<view class="cu-bar justify-end text-white">
 						<view class="action" @tap="hideModal">
-							<text class="cuIcon-close "></text>
+							<text class="cuIcon-close"></text>
 						</view>
 					</view>
 				</view>
@@ -132,8 +133,9 @@
 				});
 			},
 			showModal(e) {
-				console.info('----')
+				
 				this.modalName = e.currentTarget.dataset.target
+				console.info('---->'+e.currentTarget.dataset.target)
 			},
 			hideModal(e) {
 				this.modalName = null
