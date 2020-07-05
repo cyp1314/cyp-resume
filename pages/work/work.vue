@@ -4,7 +4,7 @@
 			<block slot="content">工作经验</block>
 		</cu-custom>
 
-		<scroll-view scroll-y class="page">
+		<scroll-view scroll-y class="page bg-white">
 			<view class="cu-timeline">
 				<view class="cu-time">2019-目前</view>
 				<view class="cu-item cur">
@@ -74,7 +74,7 @@
 			</view>
 
 
-			<view class="cu-tabbar-height"></view>
+			<view class="cu-tabbar-height bg-white"></view>
 		</scroll-view>
 	</view>
 

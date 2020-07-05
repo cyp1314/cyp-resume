@@ -16,6 +16,10 @@
             "path" : "pages/skills/skills",
             "style" : {}
         }
+        ,{
+            "path" : "pages/webpage/webpage",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"mp-alipay": {

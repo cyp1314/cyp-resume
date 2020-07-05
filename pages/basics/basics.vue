@@ -1,5 +1,5 @@
 <template>
-	
+
 	<view class="vbox">
 		<image class="top_back_img" src="../../static/person/set-top-bg_1.png" mode="aspectFit"></image>
 		<view class="top">
@@ -18,7 +18,7 @@
 				</view>
 			</view>
 		</view>
-		
+
 		<view class="cu-modal" :class="modalName=='myPhoto'?'show':''">
 			<view class="cu-dialog">
 				<view class="bg-img" style="background-image: url(http://tvax4.sinaimg.cn/large/005Tv2WXgy1ggfh9e8zomj30u0140mzf.jpg);height: 400px;">
@@ -46,18 +46,24 @@
 				<text class="middle-num">5年</text>
 			</view>
 		</view>
-		
-		<view @tap="call" class="shadow-lg cu-list menu" style="margin-top: -10px;border-radius: 4px;width: 95%;">
-			<view class="cu-item bg-gradual-blue">
-				<view class="text-bold text-df">
-					<text class="cuIcon-phone text-grey text-white"></text>
-					<text class="margin text-grey text-white">立即拨打电话</text>
-				</view>
+
+		<view class="justify-between flex lign-center flex-twice" style="width: 100%;margin-top: -30px;">
+
+			<view @tap="call" class="margin shadow-lg flex-sub " style="border-radius: 4px;">
+				<button class="bg-gradual-blue cuIcon-weixinmargin text-white text-left">
+					<text class="cuIcon-phone text-grey text-white">立即拨打电话</text>
+				</button>
+			</view>
+
+			<view class="margin shadow-lg flex-sub " style="border-radius: 4px;">
+				<button class="bg-gradual-blue cuIcon-weixinmargin text-white text-left" open-type="contact">
+					<text class="cuIcon-weixin text-grey text-white">发起微信会话</text>
+				</button>
 			</view>
 		</view>
 
 		<scroll-view scroll-y class="page">
-			<view class="margin bg-white shadow-lg shadow-warp shadow-blur" style="border-radius: 4px;width: 95%;">
+			<view class="margin bg-white shadow-lg shadow-warp shadow-blur" style="border-radius: 4px;">
 				<view class="solid-bottom">
 					<view class="cu-bar">
 						<view class="action sub-title">
@@ -70,14 +76,13 @@
 							<view class="padding-xs text-xl text-bold">学历：本科</view>
 							<view class="padding-xs text-xl text-bold">专业：计算机科学与技术（网络方向）</view>
 							<view class="padding-xs text-xl text-bold">现居地：北京</view>
-							<view class="padding-xs text-xl text-bold">籍贯：甘肃</view>
 							<view class="padding-xs text-xl text-bold">期望薪资：面议</view>
 						</view>
 					</view>
 				</view>
 			</view>
-			
-			<view class="margin bg-white shadow-lg shadow-warp shadow-blur" style="border-radius: 4px;width: 95%;">
+
+			<view class="margin bg-white shadow-lg shadow-warp shadow-blur" style="border-radius: 4px;">
 				<view class="solid-bottom">
 					<view class="cu-bar">
 						<view class="action sub-title">
@@ -87,15 +92,16 @@
 					</view>
 					<view class="flex flex-wrap justify-between">
 						<view class="padding-xs">
-							<view class="padding-xs text-xl text-bold">博客：www.chenyongpeng.wang</view>
-							<view class="padding-xs text-xl text-bold">GITEE：https://github.com/cyp1314</view>
-							<view class="padding-xs text-xl text-bold">GITHUB：https://github.com/cyp1314</view>
+							<view @tap="tonewurl('https://gitee.com/chenyp')" class="padding-xs text-xl text-bold">博客：www.chenyongpeng.wang</view>
+							<view @tap="tonewurl('https://gitee.com/chenyp')" class="padding-xs text-xl text-bold">GITEE：https://github.com/cyp1314</view>
+							<view @tap="tonewurl('https://gitee.com/chenyp')" class="padding-xs text-xl text-bold">GITHUB：https://github.com/cyp1314</view>
 						</view>
 					</view>
 				</view>
 			</view>
-			
-			<view class="margin bg-white shadow-lg shadow-warp shadow-blur" style="border-radius: 4px;width: 95%;">
+
+
+			<view class="margin bg-white shadow-lg shadow-warp shadow-blur" style="border-radius: 4px;">
 				<view class="solid-bottom">
 					<view class="cu-bar">
 						<view class="action sub-title">
@@ -106,39 +112,47 @@
 					<view class="flex flex-wrap justify-between">
 						<view class="padding-xs">
 							<view class="padding-xs text-xl text-bold">我相信有一份好奇，加上一点点努力，原来我也
-							可以站在巨人的肩膀上。</view>
+								可以站在巨人的肩膀上。</view>
 						</view>
 					</view>
 				</view>
 			</view>
 			<view class="cu-tabbar-height"></view>
 		</scroll-view>
-		
-		
-		
+
+
+
 	</view>
 </template>
 
 <script>
 	export default {
-		data(){
+		data() {
 			return {
 				modalName: null,
 			}
 		},
 		methods: {
-			call(){
+			call() {
 				uni.makePhoneCall({
-				    phoneNumber: '15510007550'
+					phoneNumber: '15510007550'
 				});
 			},
 			showModal(e) {
-				
 				this.modalName = e.currentTarget.dataset.target
-				console.info('---->'+e.currentTarget.dataset.target)
 			},
 			hideModal(e) {
 				this.modalName = null
+			},
+			// 跳转外部链接
+			tonewurl(url) {
+				console.info(url)
+				if (url == null) {
+					return false;
+				}
+				uni.navigateTo({
+					url: '../webpage/webpage?url='+url
+				});
 			},
 		}
 	}
@@ -266,6 +280,4 @@
 		color: #fcac45;
 		-webkit-font-smoothing: antialiased;
 	}
-
-
 </style>

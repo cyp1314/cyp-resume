@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/work/work",
     "pages/project/project",
-    "pages/skills/skills"
+    "pages/skills/skills",
+    "pages/webpage/webpage"
   ],
   "subPackages": [],
   "window": {
