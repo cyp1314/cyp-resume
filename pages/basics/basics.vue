@@ -4,7 +4,7 @@
 		<image class="top_back_img" src="../../static/person/set-top-bg_1.png" mode="aspectFit"></image>
 		<view class="top">
 			<view class="circle" @tap="showModal" data-target="myPhoto">
-				<image class="head" src="../../static/person/you.jpg" mode="aspectFill"></image>
+				<image class="head" src="https://wx1.sinaimg.cn/mw690/005Tv2WXgy1ggfh9e8zomj30u0140mzf.jpg" mode="aspectFill"></image>
 			</view>
 			<view class="top-texts">
 				<text class="name">陈永鹏</text>
@@ -21,7 +21,7 @@
 
 		<view class="cu-modal" :class="modalName=='myPhoto'?'show':''">
 			<view class="cu-dialog">
-				<view class="bg-img" style="background-image: url(http://tvax4.sinaimg.cn/large/005Tv2WXgy1ggfh9e8zomj30u0140mzf.jpg);height: 400px;">
+				<view class="bg-img" style="background-image: url(https://wx1.sinaimg.cn/mw690/005Tv2WXgy1ggfh9e8zomj30u0140mzf.jpg);height: 400px;">
 					<!-- <image src="../../static/person/you.jpg" mode="widthFix"></image> -->
 					<view class="cu-bar justify-end text-white">
 						<view class="action" @tap="hideModal">
@@ -73,10 +73,10 @@
 					</view>
 					<view class="flex flex-wrap justify-between">
 						<view class="padding-xs">
-							<view class="padding-xs text-xl text-bold">学历：本科</view>
-							<view class="padding-xs text-xl text-bold">专业：计算机科学与技术（网络方向）</view>
-							<view class="padding-xs text-xl text-bold">现居地：北京</view>
-							<view class="padding-xs text-xl text-bold">期望薪资：面议</view>
+							<view class="padding-xs">学历：本科</view>
+							<view class="padding-xs">专业：计算机科学与技术（网络方向）</view>
+							<view class="padding-xs">现居地：北京</view>
+							<view class="padding-xs">期望薪资：面议</view>
 						</view>
 					</view>
 				</view>
@@ -91,10 +91,19 @@
 						</view>
 					</view>
 					<view class="flex flex-wrap justify-between">
-						<view class="padding-xs">
-							<view @tap="tonewurl('https://gitee.com/chenyp')" class="padding-xs text-xl text-bold">博客：www.chenyongpeng.wang</view>
-							<view @tap="tonewurl('https://gitee.com/chenyp')" class="padding-xs text-xl text-bold">GITEE：https://github.com/cyp1314</view>
-							<view @tap="tonewurl('https://gitee.com/chenyp')" class="padding-xs text-xl text-bold">GITHUB：https://github.com/cyp1314</view>
+						<view class="">
+							<view class="content padding-xs" @tap="tonewurl('https://gitee.com/chenyp')">
+								<text class="cuIcon-list text-green"></text>
+								<text class="text-grey">博客：www.chenyongpeng.wang</text>
+							</view>
+							<view class="content padding-xs" @tap="tonewurl('https://gitee.com/chenyp')">
+								<text class="cuIcon-list text-green"></text>
+								<text class="text-grey">GITEE：https://github.com/cyp1314</text>
+							</view>
+							<view class="content padding-xs" @tap="tonewurl('https://gitee.com/chenyp')">
+								<text class="cuIcon-list text-green"></text>
+								<text class="text-grey">GITHUB：https://github.com/cyp1314</text>
+							</view>
 						</view>
 					</view>
 				</view>
@@ -105,14 +114,38 @@
 				<view class="solid-bottom">
 					<view class="cu-bar">
 						<view class="action sub-title">
-							<text class="text-xl text-bold text-blue">个人兴趣</text>
-							<text class="text-ABC text-blue">Hobby</text>
+							<text class="text-xl text-bold text-blue">个人总结</text>
+							<text class="text-ABC text-blue">Summary</text>
 						</view>
 					</view>
 					<view class="flex flex-wrap justify-between">
 						<view class="padding-xs">
-							<view class="padding-xs text-xl text-bold">我相信有一份好奇，加上一点点努力，原来我也
-								可以站在巨人的肩膀上。</view>
+							<view class="cu-item arrow">
+								<view class="content">
+									<text class="cuIcon-list text-green"></text>
+									<text class="text-grey">熟悉Java/JEE， 基础扎实，熟练掌握常用Java技术框架，能编写高质量简洁清晰的代码</text>
+								</view>
+								<view class="content">
+									<text class="cuIcon-list text-green"></text>
+									<text class="text-grey">对于Java基础技术体系（包括JVM、类装载机制、多线程并发、IO、网络）有一定的掌握和应用经验</text>
+								</view>
+								<view class="content">
+									<text class="cuIcon-list text-green"></text>
+									<text class="text-grey">良好的面向对象设计理解，熟悉面向对象设计原则，掌握设计模式及应用场景</text>
+								</view>
+								<view class="content">
+									<text class="cuIcon-list text-green"></text>
+									<text class="text-grey">具有比较强的问题分析和处理能力，有比较优秀的动手能力，热衷技术，精益求精，有一定的技术癖</text>
+								</view>
+								<view class="content">
+									<text class="cuIcon-list text-green"></text>
+									<text class="text-grey">熟悉底层中间件、分布式技术（包括缓存、消息系统、热部署、JMX等）</text>
+								</view>
+								<view class="content">
+									<text class="cuIcon-list text-green"></text>
+									<text class="text-grey">有互联网行业高并发、高稳定可用性、高性能、大数据处理相关的开发、设计经验</text>
+								</view>
+							</view>
 						</view>
 					</view>
 				</view>

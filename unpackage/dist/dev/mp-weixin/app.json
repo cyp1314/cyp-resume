@@ -19,5 +19,6 @@
     "work": "/pages/work/work",
     "project": "/pages/project/project",
     "cu-custom": "/colorui/components/cu-custom"
-  }
+  },
+  "sitemapLocation": "sitemap75.json"
 }
